@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Input Form</h1>
+    <form id="userForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>User Input Summary</h2>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            const name = document.getElementById('sabyaschi').value;
+            const email = document.getElementById('email').value;
+
+            document.getElementById('output').innerHTML = `
+                <p>Name: ${sabyaschi}</p>
+                <p>Email: ${email}</p>
+            `;
+        });
+    </script>
+
+</body>
+</html>
