@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Web Application</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Home Section</h2>
+        <p>This is the home section of the webpage.</p>
+        <button onclick="showAlert()">Click Me!</button>
+    </section>
+
+    <section id="about">
+        <h2>About Section</h2>
+        <p>This section provides information about the webpage.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Section</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <footer>
+        <p>© 2024 My Web Application</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
