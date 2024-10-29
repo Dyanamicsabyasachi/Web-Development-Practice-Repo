@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ffd700;
+            text-shadow: 2px 2px 5px #ff4500;
+        }
+
+        .cracker {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6347;
+            border-radius: 50%;
+            animation: explode 2s ease-in-out infinite;
+        }
+
+        .cracker:nth-child(odd) {
+            background-color: #ff1493;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(0.5);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        .cracker-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .lamp {
+            width: 60px;
+            height: 80px;
+            background-color: #ffdead;
+            position: relative;
+            border-radius: 50% 50% 0 0;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .lamp::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            width: 10px;
+            height: 30px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            animation: flicker 0.5s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Position crackers around */
+        .cracker1 { top: -50px; left: -50px; }
+        .cracker2 { top: -50px; right: -50px; }
+        .cracker3 { bottom: -50px; left: -50px; }
+        .cracker4 { bottom: -50px; right: -50px; }
+    </style>
+</head>
+<body>
+    <h1>Happy Diwali!</h1>
+    <div class="cracker-container">
+        <div class="cracker cracker1"></div>
+        <div class="cracker cracker2"></div>
+        <div class="cracker cracker3"></div>
+        <div class="cracker cracker4"></div>
+    </div>
+    <div class="lamp"></div>
+</body>
+</html>
