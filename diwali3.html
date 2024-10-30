@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ffcc00;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; }
+            to { text-shadow: 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #ff6600, 0 0 50px #ff6600; }
+        }
+
+        .diya {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .diya:before, .diya:after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: #ff6600;
+        }
+
+        .diya:before {
+            width: 80px;
+            height: 40px;
+            bottom: 10px;
+            left: 10px;
+            background: radial-gradient(circle at center, #ff6600, #ff3300);
+        }
+
+        .diya:after {
+            width: 30px;
+            height: 30px;
+            top: 0;
+            left: 35px;
+            background: radial-gradient(circle at center, #fff, #ffcc00);
+        }
+
+        .crackers {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .cracker {
+            width: 8px;
+            height: 50px;
+            background-color: #ff3300;
+            position: relative;
+            animation: burst 0.5s ease infinite alternate;
+        }
+
+        .cracker:before, .cracker:after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        .cracker:before {
+            top: -10px;
+            left: -3px;
+        }
+
+        .cracker:after {
+            top: -10px;
+            right: -3px;
+        }
+
+        @keyframes burst {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Diwali!</h1>
+        <div class="diya"></div>
+        <div class="crackers">
+            <div class="cracker"></div>
+            <div class="cracker"></div>
+            <div class="cracker"></div>
+        </div>
+    </div>
+</body>
+</html>
