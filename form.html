@@ -3,24 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Form Example</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
+    <h1>Student details</h1>
 
-<h1>Contact Us</h1>
+    <form action="index.php">
+    <label>first name</label>
+    <br> 
+    <input type="required" name="enter your name">
+    <br>
+    <label for="student middle name">middle name</label>
+    <br>
+    <input type="text" name="enter your name">
+    <br>
+    <label for="Student last name">last name</label>
+    <br>
+    <input type="required" name="enter your name">
+    <br>
+    <label for="">MOBILE NUMBER</label>
+    <br>
+    <input type="reqiured">
+    <br>
+    <label for="">DATE</label>
+    <br>
+    <input type="date" required>
+    <br>
+    <label for="">Email-id</label>
+    <br>
+    <input type="text" required>
+    <br>
+    <label for="">password</label>
+    <br>
+    <input type="text" name="enter your password" required>
+    <br>
+    <label for="">DOB</label>
+    <br>
+    <input type="number">
+    <br>
+    <label for="">GENDER</label>
+                <div class="input name">
+                    <input type="radio" class="radio-button" name="r1">
+                    <label>Male</label>
 
-<form action="/submit" method="POST">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+                    <input type="radio" class="radio- button" name="r1">
+                    <label>Female</label>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+                    <input type="radio" class="radio-button" name="r1">
+                    <label> others</label>
+                </div>
+        
+                <br>
+                course offerd: HTML <input type="checkbox" name="r1">
+                <br>
+                programming lanuage c <input type="checkbox" name="r1">
+                <br>
+                java-script: <input type="checkbox" name="r1">
+                <br>
+                programming lanuage c++: <input type="checkbox" name="r1">
+                <br>
+                python: <input type="checkbox" name="r1">
+                <br>
+                <textarea name="align" id=""></textarea>
 
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <b>Education</b>
+        <select name="education" id="">
+            <option value=>10th</option>
+            <option value="">11th</option>
+            <option value="" class="">12th</option>
+            <option value="" class="">+3</option>
+            <option value="" class=""></option>
+        </select>
+        <br>
+        <b>Subject</b>
+        <select name="" id="">
+        <option value="" class=>DL</option>
+        <option value="" class="">c</option>
+        <option value="" class="">web</option>
+        <option value="" class="">quant</option>
+        <option value="" class="">eng</option>
+    </select>
+    <br>
+    <button>submit</button>
+    <input type="q">
 
-    <input type="submit" value="Submit">
-</form>
+    </form>
 
 </body>
 </html>
