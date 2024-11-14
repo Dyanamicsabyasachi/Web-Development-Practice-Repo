@@ -1,0 +1,48 @@
+
+    /* Basic body styling */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f0f8ff;
+    }
+
+    /* Flower center */
+    .flower-center {
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Flower petal style */
+    .petal {
+      width: 70px;
+      height: 140px;
+      background-color: pink;
+      position: absolute;
+      border-radius: 50%;
+      transform-origin: bottom;
+    }
+
+    /* Positioning each petal around the center */
+    .petal-1 { transform: rotate(0deg) translateY(-70px); }
+    .petal-2 { transform: rotate(45deg) translateY(-70px); }
+    .petal-3 { transform: rotate(90deg) translateY(-70px); }
+    .petal-4 { transform: rotate(135deg) translateY(-70px); }
+    .petal-5 { transform: rotate(180deg) translateY(-70px); }
+    .petal-6 { transform: rotate(225deg) translateY(-70px); }
+    .petal-7 { transform: rotate(270deg) translateY(-70px); }
+    .petal-8 { transform: rotate(315deg) translateY(-70px); }
+
+    /* Flower container for centering and grouping */
+    .flower {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+  
