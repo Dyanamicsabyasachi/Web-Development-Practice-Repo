@@ -1,0 +1,29 @@
+div{
+    height:100px;
+    width:150px;
+    background-color: rgb(236, 255, 127);
+    border: 2px solid transparent;
+    transition: 0.3s ease-in;
+}
+.navbar:hover {
+    color:orangered;
+    text-shadow: 0px 0px 25px 50px orangered,
+                 0px 0px 25px 50px orangered;                   
+}
+
+button{
+    height:120px;
+    width:120px;
+    background-color: blue;
+    border: 2px solid transparent;
+    transition: 0.4s transparent;
+    font-size: xx-large;
+    
+}
+.mi:hover{
+    display: black;
+    filter: drop-shadow(0 0 10px #ffdeff);
+    color:orange;
+    text-shadow: 0px 0px 30px 60px green,
+                0px 0px 30px 60px green;
+}
