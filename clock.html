@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Clock</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="time"></div>
+        <div class="message"></div>
+    </div>
+
+    <script>
+        const timeElement = document.querySelector('.time');
+        const messageElement = document.querySelector('.message');
+        const body = document.body;
+
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            timeElement.textContent = `${hours}:${minutes}`;
+
+            if (hours >= 5 && hours < 12) {
+                messageElement.textContent = "Good Morning! Shine Bright!";
+                body.style.background = "linear-gradient(to bottom, #FFDEE9, #B5FFFC)";
+            } else if (hours >= 12 && hours < 18) {
+                messageElement.textContent = "Good Afternoon! Keep Moving!";
+                body.style.background = "linear-gradient(to bottom, #FFB75E, #ED8F03)";
+            } else if (hours >= 18 && hours < 21) {
+                messageElement.textContent = "Good Evening! Relax and Enjoy!";
+                body.style.background = "linear-gradient(to bottom, #FF9A8B, #FF6A88, #FF99AC)";
+            } else {
+                messageElement.textContent = "Good Night! Sweet Dreams!";
+                body.style.background = "linear-gradient(to bottom, #141E30, #243B55)";
+            }
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Call initially
+    </script>
+</body>
+</html>
