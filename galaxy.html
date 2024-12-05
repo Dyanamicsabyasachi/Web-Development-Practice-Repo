@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Explorer</title>
+    <link rel="stylesheet" href="galaxy.css">
+</head>
+<body>
+    <div class="galaxy">
+        <div class="star" style="top: 20%; left: 30%;" data-info="Planet A: A lush green world teeming with life."></div>
+        <div class="star" style="top: 50%; left: 60%;" data-info="Planet B: A desert planet with endless dunes."></div>
+        <div class="star" style="top: 70%; left: 40%;" data-info="Planet C: An oceanic planet with endless waters."></div>
+        <div class="info-box" id="infoBox"></div>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const infoBox = document.getElementById('infoBox');
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                infoBox.textContent = star.getAttribute('data-info');
+                infoBox.style.display = 'block';
+                infoBox.style.top = `${star.offsetTop}px`;
+                infoBox.style.left = `${star.offsetLeft + 50}px`;
+            });
+
+            star.addEventListener('mouseout', () => {
+                infoBox.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
