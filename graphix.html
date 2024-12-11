@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Animated Graphic</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #0d1117;
+            overflow: hidden;
+        }
+
+        .scene {
+            width: 200px;
+            height: 200px;
+            perspective: 1000px;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 5s infinite linear;
+        }
+
+        .cube div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #fff;
+        }
+
+        .front  { transform: rotateY(  0deg) translateZ(100px); background: #ff5733; }
+        .back   { transform: rotateY(180deg) translateZ(100px); background: #33c4ff; }
+        .right  { transform: rotateY( 90deg) translateZ(100px); background: #75ff33; }
+        .left   { transform: rotateY(-90deg) translateZ(100px); background: #ff33a1; }
+        .top    { transform: rotateX( 90deg) translateZ(100px); background: #ffff33; }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); background: #ff8833; }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
