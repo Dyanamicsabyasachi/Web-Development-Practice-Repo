@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Logo</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #282c34;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      border: 5px solid #61dafb;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 3s infinite linear;
+    }
+
+    .logo::before {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #61dafb;
+      border-radius: 50%;
+      animation: scale 3s infinite ease-in-out;
+    }
+
+    .logo span {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes scale {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <span>Logo</span>
+  </div>
+</body>
+</html>
