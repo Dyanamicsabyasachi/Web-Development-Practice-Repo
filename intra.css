@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: Arial, sans-serif;
+  }
+  
+  .flex-container {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    max-width: 1000px;
+  }
+  
+  .flex-item {
+    flex: 1;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: flex 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .flex-item:hover {
+    flex: 2;
+    background-color: #ff6b6b;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
