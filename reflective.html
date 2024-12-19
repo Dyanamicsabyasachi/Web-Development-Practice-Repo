@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflective Box with Transition</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(145deg, #ffffff, #d4d4d4);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 -4px 6px rgba(255, 255, 255, 0.2) inset;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .box::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-50%) scaleY(-1);
+      filter: blur(10px);
+      opacity: 0.5;
+    }
+
+    .box:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3), 0 -8px 12px rgba(255, 255, 255, 0.3) inset;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
